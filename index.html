@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<title>Secret Website</title>
+<style>
+    html {
+        height: 100%;
+    }
+body { height: 100%; display: flex;
+align-items: center;
+justify-content: center; 
+background-image: url("background.jpg");
+}
+.bigdiv {
+font-size: 32px;
+color: white;
+text-align: center;
+background-color: none;
+}
+input {
+    font-size: 32px;
+    margin-top: 6px;
+}
+button {
+    font-size: 32px;
+    margin-top: 8px;
+}
+</style>
+</head>
+<body>
+    <div class="bigdiv">
+        <div>Enter Pass Code</div>
+        <div><input id="codeinput"/></div>
+        <div><button id="codebutton" onclick="checkcode()">Access</button></div>
+        <div id= "successbox" hidden>Access Granted <a href="book.epub">Treasure</a></div>
+        <div id= "failbox" hidden>Access Denied </div>
+    </div>
+<script>
+    var input = document.getElementById("codeinput")
+    var button = document.getElementById("codebutton")
+    var successbox = document.getElementById("successbox")
+    var failbox = document.getElementById("failbox")
+    function checkcode (){
+        var code = input.value.toLowerCase(); 
+        if (code == "maple" || code =="maple leaf" || code =="mapleleaf") {
+            successbox.style.display = "block"
+            failbox.style.display = "none"
+        }
+        else {
+            successbox.style.display = "none"
+            failbox.style.display = "block"
+        }
+    }
+</script>
+</body>
+</html>
