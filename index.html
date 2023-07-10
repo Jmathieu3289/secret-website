@@ -4,316 +4,154 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-    <title>Secret Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Baking and Murder: A Quiz</title>
     <style>
-        div.v-center {
-            display: flex;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-        }
-
-        div.h-center {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 75%;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            color: black;
-            font-size: 1.25em;
-            text-align: center;
-            font-family: 'Courgette', cursive;
-        }
-
-        select {
-            font-size: 1.05em;
-            font-family: 'Courgette', cursive;
-        }
-
-        th,
-        td {
-            padding: 5px;
-        }
-
-        html {
-            height: 100%;
-        }
-
-        body {
-            height: 100%;
-            background-image: url("background.jpg");
-            background-size: cover;
-            overflow-y: hidden;
-        }
-
-        .bigdiv {
-            font-size: 64px;
-            color: black;
-            text-align: center;
-            font-family: 'Courgette', cursive;
-            font-weight: bold;
-            background-color: none;
-        }
-
-        button {
-            font-size: 32px;
-            margin-top: 16px;
-            margin-bottom: 16px;
-            font-family: 'Courgette', cursive;
-            border-radius: 5px;
-            background-color: lightblue;
-            padding: 8px 12px;
-        }
-
-        button:hover {
-            background-color: lightcyan;
-        }
     </style>
 </head>
-
-<body>
-    <div class="v-center">
-        <div class="h-center">
-            <table style="width:75%">
-                <tr>
-                    <th>Number of Snacks</th>
-                    <th>Pet Name</th>
-                    <th>Snack</th>
-                    <th>Location</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <select id="petname1">
-                            <option value="Gatsby">Gatsby</option>
-                            <option value="Neo">Neo</option>
-                            <option value="Lyra">Lyra</option>
-                            <option value="Copper">Copper</option>
-                            <option value="Amaya">Amaya</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="snack1">
-                            <option value="Doritos">Doritos</option>
-                            <option value="Soft Pretzel Bites">Soft Pretzel Bites</option>
-                            <option value="Cheese Cubes">Cheese Cubes</option>
-                            <option value="Pizza">Pizza</option>
-                            <option value="Boneless Chicken Wings">Boneless Chicken Wings</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="time1">
-                            <option value="10:40">10:40</option>
-                            <option value="12:30">12:30</option>
-                            <option value="2:20">2:20</option>
-                            <option value="4:10">4:10</option>
-                            <option value="6:00">6:00</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <select id="petname2">
-                            <option value="Gatsby">Gatsby</option>
-                            <option value="Neo">Neo</option>
-                            <option value="Lyra">Lyra</option>
-                            <option value="Copper">Copper</option>
-                            <option value="Amaya">Amaya</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="snack2">
-                            <option value="Doritos">Doritos</option>
-                            <option value="Soft Pretzel Bites">Soft Pretzel Bites</option>
-                            <option value="Cheese Cubes">Cheese Cubes</option>
-                            <option value="Pizza">Pizza</option>
-                            <option value="Boneless Chicken Wings">Boneless Chicken Wings</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="time2">
-                            <option value="10:40">10:40</option>
-                            <option value="12:30">12:30</option>
-                            <option value="2:20">2:20</option>
-                            <option value="4:10">4:10</option>
-                            <option value="6:00">6:00</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        <select id="petname3">
-                            <option value="Gatsby">Gatsby</option>
-                            <option value="Neo">Neo</option>
-                            <option value="Lyra">Lyra</option>
-                            <option value="Copper">Copper</option>
-                            <option value="Amaya">Amaya</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="snack3">
-                            <option value="Doritos">Doritos</option>
-                            <option value="Soft Pretzel Bites">Soft Pretzel Bites</option>
-                            <option value="Cheese Cubes">Cheese Cubes</option>
-                            <option value="Pizza">Pizza</option>
-                            <option value="Boneless Chicken Wings">Boneless Chicken Wings</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="time3">
-                            <option value="10:40">10:40</option>
-                            <option value="12:30">12:30</option>
-                            <option value="2:20">2:20</option>
-                            <option value="4:10">4:10</option>
-                            <option value="6:00">6:00</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <select id="petname4">
-                            <option value="Gatsby">Gatsby</option>
-                            <option value="Neo">Neo</option>
-                            <option value="Lyra">Lyra</option>
-                            <option value="Copper">Copper</option>
-                            <option value="Amaya">Amaya</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="snack4">
-                            <option value="Doritos">Doritos</option>
-                            <option value="Soft Pretzel Bites">Soft Pretzel Bites</option>
-                            <option value="Cheese Cubes">Cheese Cubes</option>
-                            <option value="Pizza">Pizza</option>
-                            <option value="Boneless Chicken Wings">Boneless Chicken Wings</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="time4">
-                            <option value="10:40">10:40</option>
-                            <option value="12:30">12:30</option>
-                            <option value="2:20">2:20</option>
-                            <option value="4:10">4:10</option>
-                            <option value="6:00">6:00</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>
-                        <select id="petname5">
-                            <option value="Gatsby">Gatsby</option>
-                            <option value="Neo">Neo</option>
-                            <option value="Lyra">Lyra</option>
-                            <option value="Copper">Copper</option>
-                            <option value="Amaya">Amaya</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="snack5">
-                            <option value="Doritos">Doritos</option>
-                            <option value="Soft Pretzel Bites">Soft Pretzel Bites</option>
-                            <option value="Cheese Cubes">Cheese Cubes</option>
-                            <option value="Pizza">Pizza</option>
-                            <option value="Boneless Chicken Wings">Boneless Chicken Wings</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select id="time5">
-                            <option value="10:40">10:40</option>
-                            <option value="12:30">12:30</option>
-                            <option value="2:20">2:20</option>
-                            <option value="4:10">4:10</option>
-                            <option value="6:00">6:00</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <div class="bigdiv">
-                <div><button id="codebutton" onclick="checkcode()">Access</button></div>
-                <div id="successbox" hidden>Access Granted <a href="book.epub">Treasure</a></div>
-                <div id="failbox" hidden>Access Denied </div>
+<body class="p-4 h-screen overflow-hidden bg-gradient-to-br from-blue-500 to-purple-500">
+    <div class="flex flex-col justify-start items-stretch h-full">
+        <div class="flex flex-row justify-end text-4xl items-center">
+            <div class="p-4 rounded bg-white w-auto flex flex-row flex-nowrap items-center">
+                <span class="mr-3 mb-2">Lives</span>
+                <div id="lifeContainer" class="flex flex-row justify-start">
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center grow">
+            <div id="questionContainer" class="w-1/2 rounded bg-white p-4">
+                <h1 class="font-bold text-5xl">Question <span id="labelQuestionNumber">1</span></h1>
+                <h2 id="labelQuestionText" class="text-4xl font-light"></h2>
+                <div class="flex flex-col mt-2">
+                    <button id="btnChoice1" onclick="checkAnswer(0, this)" class="text-3xl bg-gray-400 hover:bg-gray-300 rounded px-4 py-2 text-white m-4 transition-all"></button>
+                    <button id="btnChoice2" onclick="checkAnswer(1, this)" class="text-3xl bg-gray-400 hover:bg-gray-300 rounded px-4 py-2 text-white m-4 transition-all"></button>
+                    <button id="btnChoice3" onclick="checkAnswer(2, this)" class="text-3xl bg-gray-400 hover:bg-gray-300 rounded px-4 py-2 text-white m-4 transition-all"></button>
+                    <button id="btnChoice4" onclick="checkAnswer(3, this)" class="text-3xl bg-gray-400 hover:bg-gray-300 rounded px-4 py-2 text-white m-4 transition-all"></button>
+                </div>
+            </div>
+            <div id="winContainer" class="hidden text-center rounded bg-white px-4 py-6">
+                <h1 class="text-5xl font-light mb-6">Congratulations! You did it!</h1>
+                <a href="book.epub" class="mb-3 text-3xl bg-green-500 hover:bg-green-300 rounded px-4 py-2 text-white m-4 transition-all">Claim your prize <i class="fa-solid fa-download"></i></a>
+            </div>
+            <div id="loseContainer" class="hidden text-center rounded bg-white px-4 py-6">
+                <h1 class="text-5xl font-light mb-6">You lose! Better luck next time!</h1>
+                <a href="/" class="mb-3 text-3xl bg-blue-600 hover:bg-blue-400 rounded px-4 py-2 text-white m-4 transition-all">Try again</a>
             </div>
         </div>
     </div>
     <script>
-        var petname1 = document.getElementById("petname1");
-        var petname2 = document.getElementById("petname2");
-        var petname3 = document.getElementById("petname3");
-        var petname4 = document.getElementById("petname4");
-        var petname5 = document.getElementById("petname5");
+        var lives = 2;
+        var maxLives = 2;
+        var currentId = 0;
 
-        var snack1 = document.getElementById("snack1");
-        var snack2 = document.getElementById("snack2");
-        var snack3 = document.getElementById("snack3");
-        var snack4 = document.getElementById("snack4");
-        var snack5 = document.getElementById("snack5");
+        var questions = [
+            {
+                text: "Which cake does not use butter?",
+                options: ["Red Velvet Cake", "Devil's Food Cake", "Opera Cake", "Depression Cake"],
+                answer: "Depression Cake"
+            },
+            {
+                text: 'Who was not a judge on “The Great British Bake Off”',
+                options: ["Paul Hollywood", "Prue Leith", "Mel Giedroyc", "Mary Berry"],
+                answer: "Mel Giedroyc"
+            },
+            {
+                text: 'Which of the following was not a weapon in the boardgame “Clue”?',
+                options: ["Lead pipe", "Poison", "Rope", "Wrench"],
+                answer: "Poison"
+            },
+            {
+                text: 'Which detective solved the murder of Harlan Thrombey?',
+                options: ["Benoit Blanc", "Hercule Poirot", "Sherlock Holmes", "Veronica Mars"],
+                answer: "Benoit Blanc"
+            },
+        ]
 
-        var time1 = document.getElementById("time1");
-        var time2 = document.getElementById("time2");
-        var time3 = document.getElementById("time3");
-        var time4 = document.getElementById("time4");
-        var time5 = document.getElementById("time5");
+        var questionNumberLabel = document.getElementById("labelQuestionNumber");
+        var questionTextLabel = document.getElementById("labelQuestionText");
+        var button1 = document.getElementById("btnChoice1");
+        var button2 = document.getElementById("btnChoice2");
+        var button3 = document.getElementById("btnChoice3");
+        var button4 = document.getElementById("btnChoice4");
+        var buttons = [button1, button2, button3, button4];
+        var questionContainer = document.getElementById("questionContainer");
+        var winContainer = document.getElementById("winContainer");
+        var loseContainer = document.getElementById("loseContainer");
 
-        var button = document.getElementById("codebutton");
+        var lifeContainer = document.getElementById("lifeContainer");
 
-        var successbox = document.getElementById("successbox");
-        var failbox = document.getElementById("failbox");
-
-        function checkcode (){
-
-            var p1 = petname1.value; 
-            var p2 = petname2.value; 
-            var p3 = petname3.value; 
-            var p4 = petname4.value; 
-            var p5 = petname5.value; 
-
-            var s1 = snack1.value;
-            var s2 = snack2.value;
-            var s3 = snack3.value;
-            var s4 = snack4.value;
-            var s5 = snack5.value;
-
-            var t1 = time1.value;
-            var t2 = time2.value;
-            var t3 = time3.value;
-            var t4 = time4.value;
-            var t5 = time5.value;
-
-            if (
-                p1 == "Amaya" &&
-                p2 == "Copper" &&
-                p3 == "Neo" &&
-                p4 == "Lyra" &&
-                p5 == "Gatsby" &&
-                s1 == "Pizza" &&
-                s2 == "Doritos" &&
-                s3 == "Soft Pretzel Bites" &&
-                s4 == "Cheese Cubes" &&
-                s5 == "Boneless Chicken Wings" &&
-                t1 == "2:20" &&
-                t2 == "4:10" &&
-                t3 == "6:00" &&
-                t4 == "12:30" &&
-                t5 == "10:40"
-            ) {
-                successbox.style.display = "block";
-                failbox.style.display = "none";
-            }
-            else {
-                successbox.style.display = "none";
-                failbox.style.display = "block";
-            }
+        var loadQuestion = (id) => {
+            questionNumberLabel.innerText = id + 1;
+            questionTextLabel.innerText = questions[id].text;
+            button1.innerText = questions[id].options[0];
+            button2.innerText = questions[id].options[1];
+            button3.innerText = questions[id].options[2];
+            button4.innerText = questions[id].options[3];
+            buttons.forEach(button => {
+                if (button.classList.contains('bg-red-500')) {
+                    button.classList.remove('bg-red-500');
+                    button.classList.remove('hover:bg-red-300');
+                }
+            });
         }
+
+        var renderLives = (count) => {
+            var innerHtml = "";
+            for (var i = 0; i < maxLives; i++) {
+                if (i < count) {
+                    innerHtml = '<i class="fa-solid fa-spoon text-green-500"></i>' + innerHtml;
+                } else {
+                    innerHtml = '<i class="fa-solid fa-spoon text-red-500"></i>' + innerHtml;
+                }
+            }
+            lifeContainer.innerHTML = innerHtml;
+        }
+
+        var checkAnswer = (id, el) => {
+            if (questions[currentId].answer === questions[currentId].options[id]) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Good work!',
+                    timer: 1200,
+                    heightAuto: false,
+                    showConfirmButton: false
+                }).then(() => {
+                    currentId++;
+                    if (currentId >= questions.length) {
+                        questionContainer.style.display = 'none';
+                        winContainer.style.display = 'block';
+                    } else {
+                        loadQuestion(currentId);
+                    }
+                });
+            } else {
+                lives -= 1;
+                el.classList.add('hover:bg-red-300');
+                el.classList.add('bg-red-500');
+                renderLives(lives);
+                Swal.fire({
+                icon: 'error',
+                title: 'Not correct',
+                timer: 1200,
+                heightAuto: false,
+                showConfirmButton: false
+                }).then(() => {
+                    if (lives == 0) {
+                        questionContainer.style.display = 'none';
+                        loseContainer.style.display = 'block'
+                    } else {
+                        currentId++;
+                        loadQuestion(currentId);
+                    }
+                });
+            }      
+        }
+
+        loadQuestion(currentId);
+        renderLives(lives);
+
     </script>
 </body>
